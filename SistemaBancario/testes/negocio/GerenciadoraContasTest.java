@@ -1,3 +1,5 @@
+//Thomas Ferreira - TADS - Manhã
+
 package negocio;
 
 import static org.junit.Assert.*;
@@ -17,9 +19,9 @@ public class GerenciadoraContasTest {
 	
 	
 	
-	//Saldo suficiente em ambas as contas
+	
 	@Test
-	public void testTransfereValor() {
+	public void TransferenciaTeste() {
 		ContaCorrente conta01= new ContaCorrente(idConta01,200,true);
 		ContaCorrente conta02= new ContaCorrente(idConta02,0,true);
 		
@@ -39,9 +41,9 @@ public class GerenciadoraContasTest {
 	}
 	
 	
-	//Saldo insuficiente e positivo na Conta 1
+	
 	@Test
-	public void testTransfereValor02() {
+	public void TransferenciaTeste2() {
 		ContaCorrente conta01 = new ContaCorrente(idConta01, 100, true);
 		ContaCorrente conta02 = new ContaCorrente(idConta02, 0, true);
 		
@@ -58,9 +60,9 @@ public class GerenciadoraContasTest {
 	}
 	
 	
-	//Saldo insuficiente e negativo na Conta 1
+	
 	@Test
-	public void testTransfereValor03() {
+	public void TransferenciaTeste3() {
 		ContaCorrente conta01 = new ContaCorrente(idConta01, -100, true);
 		ContaCorrente conta02 = new ContaCorrente(idConta02, 0, true);
 		
@@ -77,7 +79,7 @@ public class GerenciadoraContasTest {
 	}
 	
 	
-	//Saldoo insuficiente em ambas as contas
+	
 	@Test
 	public void testTransfereValor04() {
 		ContaCorrente conta01 = new ContaCorrente(idConta01, -100, true);

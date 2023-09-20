@@ -1,3 +1,5 @@
+//Thomas Ferreira - TADS - Manhã
+
 package negocio;
 
 
@@ -57,28 +59,33 @@ public class GerenciadoraClienteTest {
         assertNull(gerClientes.pesquisaCliente(idCliente02));
     }
     
-    
-    //Validar a idade do cliente
-    @Test
+        @Test
 	public void testValidarIdade() {
 		try {
 			assertThat(gerClientes.validaIdade(gerClientes.pesquisaCliente(idCliente01).getIdade()), is(true));
-		} catch (IdadeNaoPermitidaException e) {
+		}
+        catch (IdadeNaoPermitidaException e) {
 			e.printStackTrace();
 		}
+
 		try {
 			assertThat(gerClientes.validaIdade(gerClientes.pesquisaCliente(idCliente02).getIdade()), is(true));
-		} catch (IdadeNaoPermitidaException e) {
+		}
+        catch (IdadeNaoPermitidaException e) {
 			e.printStackTrace();
 		}
+
 		try {
-			assertThat(gerClientes.validaIdade(17), is(true));
-		} catch (IdadeNaoPermitidaException e) {
+			assertThat(gerClientes.validaIdade(10), is(true));
+		} 
+        catch (IdadeNaoPermitidaException e) {
 			e.printStackTrace();
 		}
+
 		try {
-			assertThat(gerClientes.validaIdade(66), is(true));
-		} catch (IdadeNaoPermitidaException e) {
+			assertThat(gerClientes.validaIdade(100), is(true));
+		} 
+        catch (IdadeNaoPermitidaException e) {
 			e.printStackTrace();
 		}
 	}
